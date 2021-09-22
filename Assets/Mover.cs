@@ -62,6 +62,7 @@ public class Mover : MonoBehaviour
         {
             GetComponent<Rigidbody>().AddForce(new Vector3(0, 325,0));
             noChao = false;
+            
         }
      
 

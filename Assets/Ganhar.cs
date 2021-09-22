@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ganhar : MonoBehaviour
 {
     public Text txt;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +24,13 @@ public class Ganhar : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            
             Destroy(this.gameObject);
+            Destroy(Player);
             txt.enabled = true;
+            SceneManager.LoadScene(0);
+
         }
 
     }
+ 
 }
